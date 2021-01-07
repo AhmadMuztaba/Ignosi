@@ -1,0 +1,20 @@
+<%- include('partials/fileUploadheader'); -%>
+<h1 class="h1Center">Book details
+</h1>
+<div class="backColor">
+<form class="lineHeght" action="/Upload" method="post" encType="multipart/form-data">
+  <label class="book"><b>Book name:</b></label>
+  <input class="inputBookName" type="text" name="bookName" value="" name="bookName" placeholder="">
+  <label class="book"><b>Book Author</b></label>
+  <input class="inputBookAuthor" type="text" name="bookAuthor" value="" name="bookAuthor" placeholder=""><br />
+  <label class="book"><b>price</b></label>
+  <input class="inputPrice" type="text" name="price" value="" name="price" placeholder="" /><br>
+  <label class="book"><b>image upload</b></label>
+  <input class="imgUpload" type="file" name="imgUpload"><br />
+  <label class="book aboutBook"><b>About book</b></label><br />
+  <textarea class="textArea" name="bookDetals" rows="5" cols="125" placeholder="tell something about the book"></textarea>"
+  <input type="hidden" name="id" value="<%=userId%>" />
+  <button type="submit" class="btn btn-lg btn-warning upbutton">submit</button>
+</form>
+  </div>
+<%- include('partials/nextFooter') ;-%>

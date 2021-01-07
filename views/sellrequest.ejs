@@ -1,0 +1,67 @@
+<%- include('partials/nextheader'); -%>
+
+<%if(found.length>0){%>
+<h1 class="sellheader">Order</h1>
+<div class="orderBackground">
+  <div class="container">
+
+  <div class="row">
+    <div class="col-sm-2">
+      Book name
+    </div>
+        <div class="col-sm-2">
+        Buyer's Name
+        </div>
+          <div class="col-sm-2">
+          Mobile
+          </div>
+            <div class="col-sm-2">
+            Address
+            </div>
+              <div class="col-sm-2">
+              Message
+              </div>
+            <div class="col-sm-2">
+            item
+            </div>
+    </div>
+<%found.forEach(function(item){%>
+  <div class="row">
+      <div class="col-sm-2">
+      <%=item.bookname%>
+      </div>
+        <div class="col-sm-2">
+          <%=item.buyername%>
+        </div>
+    <div class="col-sm-2">
+    <%=item.mobileNumberOfBuyer%>
+    </div>
+      <div class="col-sm-2">
+      <%=item.Homeaddress%></div>
+        <div class="col-sm-2"> <a href="/message/<%=item._id%>"><i class="fas fa-comments"></i>message</a></div>
+
+      <%if(item.Shipped=="shipped"){%>
+           <div class="col-sm-2">
+        <div>
+          item shipped
+          </div>
+      </div>
+
+
+      <%}else{%>
+            <div class="col-sm-2">
+        <form action="/delivered" method="post">
+        (check this when you have shipped the product)
+        <input type="hidden" name="sellid" value="<%=item._id%>">
+        <input type="checkbox" name="delivered" value="shipped" onclick="this.form.submit()">
+        </form>
+      <%}%>
+
+  </div>
+  <%})%>
+</div>
+</div>
+<%}else{%>
+  <h1 class="sellheader">No items</h1>
+<%}%>
+<%- include('partials/sellFooter'); -%>

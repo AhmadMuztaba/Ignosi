@@ -1,0 +1,36 @@
+<%- include("partials/loginHeader"); -%>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="r1">
+        Sign
+      </div>
+      <div class="r2">
+        Up
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="log1">
+        <form action="/userregister" method="post">
+          <label class=label1>
+            email
+          </label>
+          <input class="input1" type="email" name="username" value="" placeholder="please type the email address" autofocus>
+          <label class="label2">
+            password
+          </label>
+          <input class="input2" type="password" name="password" value="" placeholder="please your password here">
+          <button type="submit" class="btn btn-lg loginButton">Signup</button>
+        </form>
+
+        <a class="btn btn-block btn-social btn-google googly" href="/auth/google" role="button">
+          <i class="fab fa-google"></i>
+          Sign Up with Google
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/loginFooter") ; -%>

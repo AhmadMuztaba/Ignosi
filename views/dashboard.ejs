@@ -1,0 +1,71 @@
+<%- include('partials/nextheader'); -%>
+<div class="habijabi"></div>
+
+
+
+<div class="dashboardpart1">
+<div class="userInfo circle"style="margin-left: 150px;>
+<b class="circleWritingPosition"> User name:</br><%=all.username%><br />
+  </div>
+
+
+  <div class="userInfo circle">
+<b> number of sell post:</b><%=found.length%><br />
+    </div>
+
+<div class="userCarousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <%for(let i=1;i<found.length;i++){%>
+    <li data-target="#carouselExampleIndicators" data-slide-to="<%=i%>"></li>
+  <%}%>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <% if(found.length>0){%>
+      <a href="/aboutbook/<%=found[0]._id%>"><img src="<%=found[0].image%>" class="d-block w-100 userCarouselImage" alt="..."></a>
+    <%}else{%>
+      <img src="/images/noPhotoFound.png" class="d-block w-100 userCarouselImage" alt="...">
+    <%}%>
+    </div>
+  <%for(let i=1;i<found.length;i++){%>
+    <div class="carousel-item">
+    <a href="/aboutbook/<%=found[i]._id%>"><img src="<%=found[i].image%>" class="d-block w-100 userCarouselImage" alt="...">
+    </div>
+  <%}%>
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<div class="userInfo circle a">
+<b>Books bought:</b><%=buy.length%><br />
+  <div class="userInfo circle b">
+<b>Books sold + Request:</b><%=sell.length%>
+    </div>
+</div>
+
+<div class="more">
+  <a href="/buyerpage"><button type="button" name="button" class="btn btn-danger btn-lg b1">Bought File info</button></a>
+<a href="/sellrequest/"><button type="button" name="button" class="btn btn-warning btn-lg b2">Sell Notification</button></a>
+<%if(sell.length!=0){%>
+<div class=not>
+  <%=sell.length%>
+  </div>
+<%}%>
+  </div>
+
+<div class="lastPart">
+
+  </div>
+
+<%- include('partials/nextFooter'); -%>

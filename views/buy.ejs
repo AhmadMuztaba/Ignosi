@@ -1,0 +1,29 @@
+<%- include('partials/nextheader'); -%>
+<div class='buy'>
+  <b>buyer id: <%=buyer%></b><br />
+  <b><%=product[0].book_name%></b><br />
+  <b>price:<%=product[0].price%></b><br />
+  <div class="buyformInfo">
+  <form action="/order" class="buyForm" method="post">
+    <input type="hidden" class='buyFormInput' name="buyerid" style="
+    background-color: red;"  value="<%=buyer%>">
+    <input type="hidden" name="sellerid" style="
+    background-color: red;" value="<%=product[0].userid%>">
+    <input type="hidden" name="bookname" style="
+    background-color: red;" value="<%=product[0].book_name%>">
+    <input type="hidden" name="price" style="
+    background-color:red ;"  value="<%=product[0].price%>">
+    <input type="text" name="buyerNAme" style="
+    background-color:#462929 " value="" placeholder="name"><br>
+    <input type="text" name="buyerMobileNumber" style="
+    background-color: #5d4848;" value="" placeholder="MobileNumber"><br>
+    <textarea name="Address" rows="8" cols="80" style="
+    background-color:#713636;" placeholder="enter your Addess"></textarea><br />
+    <button type="submit" name="button" class="btn btn-info">Place the Order</button>
+  </form>
+  </div>
+
+
+</div>
+
+<%- include('partials/nextFooter'); -%>

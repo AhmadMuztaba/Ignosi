@@ -1,0 +1,18 @@
+<%- include('partials/nextheader'); -%>
+<h1 class="sellheader" style="
+    right: 30px;
+"> Message Page</h1>
+<%message.forEach(function(item){%>
+  <div class="cpbackground msgnew">
+<span class="spanclass"><i class="fas fa-user-shield"></i>  <%=item.username%>: </span><%=item.message%><br/>
+</div>
+<%})%>
+
+<form class="" action="/message" method="post">
+<input type="text" name="msg" value="" autocomplete="off" class="comInput" style="
+    top: 100px;">
+<input type="hidden" name="username" value="<%=rs[0].username%>">
+<input type="hidden" name="sellpostid" value="<%=Sell[0]._id%>">
+<button type="submit" class="btn btn-warning msgButton"name="button">Message</button>
+</form>
+<%- include('partials/sellFooter');-%>

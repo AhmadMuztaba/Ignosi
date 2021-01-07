@@ -1,0 +1,20 @@
+<%- include('partials/nextheader'); -%>
+<%found.forEach(function(item){%>
+  <%=item.bookname%>
+  <%=item.buyername%>
+  <%=item.mobileNumberOfBuyer%>
+  <%=item.Homeaddress%>
+
+
+   <a href="/message/<%=item._id%>"><i class="fas fa-comments"></i>message</a>
+  <%if(item.Shipped=="shipped"){%>
+    <div>
+      item shipped
+      </div>
+  <%}else{%>
+     Item hasn't shipped yet .
+  <%}%>
+
+<%})%>
+
+<%- include('partials/nextFooter'); -%>
