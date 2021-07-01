@@ -4,7 +4,7 @@
   "description": "A sytem for selling and buying books",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass":"node-sass sass/main.scss public/css/styles.css --w"
   },
   "author": "Ahmad Muztaba",
   "license": "ISC",
@@ -15,9 +15,10 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.1.6",
     "express-session": "^1.17.0",
-    "mongoose": "^5.8.9",
+    "mongoose": "^5.12.14",
     "mongoose-findorcreate": "^3.0.0",
     "multer": "^1.4.2",
+    "node-sass": "^6.0.1",
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",

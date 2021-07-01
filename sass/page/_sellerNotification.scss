@@ -1,0 +1,31 @@
+.sellerNotification{
+    background-color: #A19882;
+    margin-bottom: 8rem;
+    padding: 2rem;
+    &--header{
+       display: flex;
+       justify-content: center;
+        padding: 3rem;
+        font-size: 6rem;
+    }
+    &__name{
+      margin-left: 3rem;
+      font-size: 2rem;
+      padding: 2%;
+        display: grid;
+        font-weight: 800;
+        grid-template-columns:repeat(6,1fr);
+        border-bottom: 1px solid rgb(95, 102, 102);
+    }
+    &__info{
+        padding: 2%;
+        margin-left: 3rem;
+        font-size: 2rem;
+        display: grid;
+        grid-template-columns:repeat(6,1fr);;
+    }
+    &--message:link,&--message:visited{
+        text-decoration: none;
+        color: teal;
+    }
+}

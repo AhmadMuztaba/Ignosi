@@ -1,41 +1,57 @@
-<%- include('partials/nextheader'); -%>
-<div class="container">
-  <img class="imageMaking inLine"src="<%=list[0].image%>"/>
-  <div class="fl">
-    <b>Bookname:</b> <%=list[0].book_name%><br />
-    <b>  Author name:</b><%=list[0].author_Name%><br />
-    <b>  Price:</b><br />
-    <b>  Details:</b><%=   list[0].book_details.substring(0,40)%><br />
-    <%=   list[0].book_details.substring(41,95)%><br />
-      <%=   list[0].book_details.substring(96,140)%>
-      <%if(currentid!=list[0].userid){%>
-        <a href="/buy/<%=list[0]._id%>"><button class="btn btn-warning">Buy</button></a>
-      <%}else{%>
-    <form action="/remove" method="post">
-      <button type="submit" class="btn btn-danger" name="rmbButton" value="<%=list[0]._id%>">Remove</button>
-      </form>
-    <%}%>
+<%- include('partials/mainheader'); -%>
+<section class="BookAbout">
+  <div class="BookAbout__info">
+    <div class="BookAbout__info--image">
+      <img class="BookAbout__info--image-pic"src="<%=list[0].image%>"/>
+    </div>
+    <div class="BookAbout__info--allinfo">
+      <div>
+        <b>Bookname:</b> <%=list[0].book_name%><br />
+      </div>
+      <div>
+        <b>  Author name:</b><%=list[0].author_Name%><br />
+      </div>
+      <div>
+        <b>  Price:<%=list[0].book_price%></b><br />
+      </div>
+      <div>
+        <b>  Details:</b><%=   list[0].book_details.substring(0,40)%><br />
+        <%=   list[0].book_details.substring(41,95)%><br />
+          <%=   list[0].book_details.substring(96,140)%>
+      </div>
+      <div>
+        <%if(currentid!=list[0].userid){%>
+          <a href="/buy/<%=list[0]._id%>"><button class="btn btn-warning">Buy</button></a>
+        <%}else{%>
+      <form action="/remove" method="post">
+        <button type="submit" class="btn btn-danger" name="rmbButton" value="<%=list[0]._id%>">Remove</button>
+        </form>
+      <%}%>
+      </div>
+    </div>
   </div>
-</div>
-<hr />
-<hr />
-<div class="comment">
+</section>
+
+
+
+
+<section class="Bookcomments">
 
 <form action="/aboutbook" method="post">
-  <input type="text" name="comment" placeholder="Give a review" autocomplete="off" class="comInput">
+  <input type="text" name="comment" placeholder="Give a review" autocomplete="off" class="Bookcomments--input">
   <input type="hidden" name="prd" value="<%=list[0]._id%>"/>
-  <button type="submit" class="btn btn-warning cmntSubmit" name="commentButton">post</button>
+  <button type="submit" class="btn btn-warning" name="commentButton">post</button>
   </form>
 
   <div>
     <%for(let i=0;i<comnt.length;i++){%>
-      <div class="cpbackground">
+      <div class="Bookcomments__comment">
            <span class="spanclass"><b><%=comnt[i].user%>:  </b></span><b><%=comnt[i].comment%></b><br />
         </div>
         </div>
       <%}%>
     </div>
-  </div>
+  </section>
 
 
-<%- include('partials/nextFooter'); -%>
+  <%- include('partials/mainFooter') ;-%>

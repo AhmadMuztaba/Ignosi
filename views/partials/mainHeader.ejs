@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>R-shop</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap-social.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.11/js/all.js"></script>
+    <link href="https://fonts.maateen.me/charu-chandan-hard-stroke/font.css" rel="stylesheet">
+    <link href="https://fonts.maateen.me/apona-lohit/font.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Asap|Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Great+Vibes|Pacifico|Poppins|Zhi+Mang+Xing&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar__logo">
+            <a class="btn btn--logo" href="/success">Brand</a>
+        </div>
+        <div class="mainHeader__option">
+            <div class="mainHeader__option--search">
+                <i class="fab fa-searchengin mainHeader__option--search-icon"></i>
+                    <form action="/search" method="post" class="mainHeader__option--search-form">
+                    <input type="text" name="search" value="" autocomplete="off" class="mainHeader__option--search-input" placeholder="search">
+            </form>
+            </div>
+            <div class="mainHeader__option--sellBooks">
+                <a class="mainHeader__option--sellBooks-link"href="/fileUpload"><i class="fas fa-dollar-sign"></i>Sell books</a>
+            </div>
+            <div class="mainHeader__option--profile">
+                <div class="mainHeader__option--profile-icon">
+                    <i class="far fa-user"></i> Profile
+                </div>
+                <div class="mainHeader__option--profile-dropdown">
+                    <label for="dropdown">
+                       <i class="fi-xwsdxl-chevron-wide" style="
+                       cursor: pointer;
+                   "></i>
+                    </label>
+                    <input id="dropdown" class="mainHeader__option--profile-dropdown-input"type="checkbox">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mainHeader__option--profile-dropdown-show">
+        <div class="mainHeader__option--profile-dropdown-show-logout">
+            <a class="mainHeader__option--profile-dropdown-show-logout-link"href="/logout"><i class="fi-ctluxl-sign-out-solid"></i>Log Out</a>
+        </div>
+        <div class="mainHeader__option--profile-dropdown-show-dashboard">
+            <a class="mainHeader__option--profile-dropdown-show-dashboard-link" href="/dashboard">Dashboard</a>
+        </div>
+    </div>

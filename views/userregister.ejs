@@ -1,36 +1,24 @@
 <%- include("partials/loginHeader"); -%>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="r1">
-        Sign
-      </div>
-      <div class="r2">
-        Up
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="log1">
-        <form action="/userregister" method="post">
-          <label class=label1>
-            email
-          </label>
-          <input class="input1" type="email" name="username" value="" placeholder="please type the email address" autofocus>
-          <label class="label2">
-            password
-          </label>
-          <input class="input2" type="password" name="password" value="" placeholder="please your password here">
-          <button type="submit" class="btn btn-lg loginButton">Signup</button>
-        </form>
-
-        <a class="btn btn-block btn-social btn-google googly" href="/auth/google" role="button">
-          <i class="fab fa-google"></i>
+<section class="signup">
+  <div class="signup__design">
+      <span class="signup--log">Sign</span>
+      <span class="signup--in">Up</span>
+  </div>
+  <div class="signup__form">
+      <form class="signup--form" action="/userregister" method="post">
+          <label class="signup--form--label" for="Email">Email</label>
+          <input type="email" class="signup--form--input" name="email" id="email" required autocomplete="off"/>
+          <label class="signup--form--label" for="password">password</label>
+          <input type="password" class="signup--form--input" name="password" required id="password"/>
+          <button type="submit"class="btn btn-lg btn--form-signup">signup</button>
+      </form>
+      <a class="btn btn--googleAuth" href="/auth/google" role="button">
+        <div class="margin-3-px">
+          <i class="fab fa-google "></i>
+        </div>
           Sign Up with Google
         </a>
-      </div>
-    </div>
   </div>
-</div>
+</section>
 
-<%- include("partials/loginFooter") ; -%>
+<%- include("partials/mainFooter") ; -%>

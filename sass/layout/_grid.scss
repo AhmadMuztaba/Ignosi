@@ -1,0 +1,11 @@
+.grid{
+    width: 114rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+    color: darkslategray;
+    display: grid;
+    margin-right: 5rem;
+    grid-template-columns:repeat(3,23rem);
+    grid-column-gap: 15rem;
+    grid-row-gap:5rem;
+}

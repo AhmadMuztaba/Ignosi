@@ -1,18 +1,18 @@
-<%- include('partials/nextheader'); -%>
-<h1 class="sellheader" style="
-    right: 30px;
-"> Message Page</h1>
+<%- include('partials/mainHeader'); -%>
+<section class="message">
+<h1 class="message__heading"> Message Page</h1>
 <%message.forEach(function(item){%>
-  <div class="cpbackground msgnew">
+  <div class="message__show">
 <span class="spanclass"><i class="fas fa-user-shield"></i>  <%=item.username%>: </span><%=item.message%><br/>
 </div>
 <%})%>
-
-<form class="" action="/message" method="post">
-<input type="text" name="msg" value="" autocomplete="off" class="comInput" style="
-    top: 100px;">
-<input type="hidden" name="username" value="<%=rs[0].username%>">
-<input type="hidden" name="sellpostid" value="<%=Sell[0]._id%>">
-<button type="submit" class="btn btn-warning msgButton"name="button">Message</button>
-</form>
-<%- include('partials/sellFooter');-%>
+<div class="message__formWrapper">
+  <form class="" action="/message" method="post">
+    <input type="text" name="msg" value="" class="message__formWrapper--input" autocomplete="off">
+    <input type="hidden" name="username" value="<%=rs[0].username%>">
+    <input type="hidden" name="sellpostid" value="<%=Sell[0]._id%>">
+    <button type="submit" class="btn btn-warning"name="button">Message</button>
+    </form>
+</div>
+</section>
+<%- include('partials/mainFooter');-%>

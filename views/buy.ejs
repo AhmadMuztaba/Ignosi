@@ -1,29 +1,32 @@
-<%- include('partials/nextheader'); -%>
-<div class='buy'>
-  <b>buyer id: <%=buyer%></b><br />
-  <b><%=product[0].book_name%></b><br />
-  <b>price:<%=product[0].price%></b><br />
-  <div class="buyformInfo">
-  <form action="/order" class="buyForm" method="post">
-    <input type="hidden" class='buyFormInput' name="buyerid" style="
-    background-color: red;"  value="<%=buyer%>">
-    <input type="hidden" name="sellerid" style="
-    background-color: red;" value="<%=product[0].userid%>">
-    <input type="hidden" name="bookname" style="
-    background-color: red;" value="<%=product[0].book_name%>">
-    <input type="hidden" name="price" style="
-    background-color:red ;"  value="<%=product[0].price%>">
-    <input type="text" name="buyerNAme" style="
-    background-color:#462929 " value="" placeholder="name"><br>
-    <input type="text" name="buyerMobileNumber" style="
-    background-color: #5d4848;" value="" placeholder="MobileNumber"><br>
-    <textarea name="Address" rows="8" cols="80" style="
-    background-color:#713636;" placeholder="enter your Addess"></textarea><br />
-    <button type="submit" name="button" class="btn btn-info">Place the Order</button>
-  </form>
+<%- include('partials/mainheader'); -%>
+
+<section class="booksell">
+  <h2 class="heading--secondary backgroung-color-blue">
+    <b><%=product[0].book_name%></b><br />
+    <b>price:<%=product[0].book_price%></b><br />
+  </h2>
+  <div class="booksell__form">
+      <form class="booksell__form--form" action="/order" method="post" encType="multipart/form-data">
+        <input type="hidden" name="buyerid" value="<%=buyer%>">
+        <input type="hidden" name="sellerid" value="<%=product[0].userid%>">
+        <input type="hidden" name="bookname" value="<%=product[0].book_name%>">
+        <input type="hidden" name="price" value="<%=product[0].book_price%>">
+          <div class="booksell__form--form__bookname">
+              <label class="booksell__form--form__bookname--label" for="bookname"><b>Name:</b></label>
+              <input class="booksell__form--form__bookname--input" type="text"name="buyerNAme" placeholder="name">
+          </div>
+          <div class="booksell__form--form__bookAuthor">
+              <label class="booksell__form--form__bookAuthor--label" for="bookAuthor"><b>Mobile Number</b></label>
+          <input class="booksell__form--form__bookAuthor--input" type="text" value="" name="buyerMobileNumber" placeholder="MobileNumber"><br />
+          </div>
+          <div class="booksell__form--form__BookDetails">
+              <label class="booksell__form--form__BookDetails--label" for="bookDetails"><b>Address</b></label><br/>
+          <textarea class="booksell__form--form__BookDetails--textarea" name="Address" placeholder="enter your Addess"></textarea>
+          </div>
+          <div class="booksell__form--form__button margin-bottom--big margin-top--medium">
+          <button type="submit" class="btn btn-lg btn-warning form-button margin-bottom--big">Place the order</button>
+          </div>
+        </form>
   </div>
-
-
-</div>
-
-<%- include('partials/nextFooter'); -%>
+</section>
+<%- include('partials/mainFooter'); -%>

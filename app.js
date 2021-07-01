@@ -1,4 +1,3 @@
-//jshint esversion:6
 require('dotenv').config();
 const express = require("express");
 const ejs = require("ejs");
@@ -24,6 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
+
 app.use(session({ //for express-session we are creating session
   secret:process.env.SECRET,
   resave: false,
@@ -32,7 +32,17 @@ app.use(session({ //for express-session we are creating session
 app.use(passport.initialize()); //passport initialization
 app.use(passport.session()); //passport session create
 
-mongoose.connect('mongodb://localhost:27017/userDB', {useNewUrlParser: true, useUnifiedTopology: true});//connection mongoose
+const connect=async(req,res)=>{
+  try{
+    const connect=await mongoose.connect(process.env.MONGO_CONNECT,{useNewUrlParser: true, useUnifiedTopology: true});
+  if(connect){
+    console.log('database connected');
+  }
+  }catch(err){
+    console.log('database connection failed');
+  }
+}
+connect();//connection mongoose
 mongoose.set("useCreateIndex", true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
@@ -79,6 +89,7 @@ const messageSchema=new mongoose.Schema({
 
 userSchema.plugin(passportLocalMongoose); //to use passportLocalMongoose
 userSchema.plugin(findOrCreate);
+
 const Message=new mongoose.model("Message",messageSchema);
 const Buy_sell=new mongoose.model("Buy_sell",buy_SellSchema);
 const Comment=new mongoose.model('CommentDB',commentSchema);

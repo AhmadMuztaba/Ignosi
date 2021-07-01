@@ -1,0 +1,38 @@
+.BookAbout{
+    padding: 10rem;
+    border-bottom:1px solid white;
+ &__info{
+     display: flex;
+     &--image{
+       flex: 0 0 40%;
+       &-pic{
+           height: 35rem;
+           width: 35rem;
+       }
+     }
+     &--allinfo{
+        font-size: 2rem;
+     }
+ }
+}
+.Bookcomments{
+    &__comment{
+        padding: 3%;
+        background-color: #606060;
+        margin-bottom: 2rem;
+    }
+    padding: 10rem;
+    font-size: 2rem;
+    &--input{
+        padding: 2%;
+        margin-right: 2rem;
+        height: 20rem;
+        width: 90%;
+        border-radius: 2rem;
+        margin-bottom: 6rem;
+        &:focus{
+            outline: none;
+            box-shadow:0 1rem .4rem rgba(rgb(238, 125, 125),.25);
+        }
+    }
+}

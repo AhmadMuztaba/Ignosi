@@ -1,0 +1,71 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    color: white;
+    font-family: 'Asap', sans-serif;
+    line-height: 1.7;
+}
+
+.navbar{
+    font-size:3rem;
+    font-family: 'Baloo', cursive;
+    &__option{
+        font-weight: 400;
+        font-size: 1.7rem;
+    }
+}
+.btn{
+    font-size: 1.7rem;
+    &--logo{
+        font-family:'Baloo', cursive;
+        font-size: 2.5rem;
+    }
+    &--download{
+        margin-top: 3rem;
+        font-family: 'Lobster', cursive;
+        font-size: 2rem;
+    }
+}
+
+.custom--carousel{
+    height:46.2rem;
+    width: 100vw;
+    overflow: hidden;
+    border-bottom:1px solid white;
+}
+.carousel__slide{
+    font-family: 'Zhi Mang Xing', cursive;
+    font-size: 2.2rem;
+    &--text{
+        font-size: 5.5rem;
+        line-height: 1.2;
+        &-2,&-3{
+            font-family: 'Zhi Mang Xing', cursive;
+           font-size: 5.2rem;
+        }
+        &-4{
+            font-family: 'AponaLohit', sans-serif;
+            font-size: 4.6rem;
+        }
+        &-5{
+            font-family: 'AponaLohit', sans-serif;
+            font-size: 4.2rem;
+        }
+    }
+  }
+
+  .footer{
+    padding:2%;
+    line-height: 2;
+    text-align: center;
+    font-size: 1.7rem;
+    background-color: #766B6B;
+    margin-bottom: 0px;
+    overflow: hidden;
+
+    &__icon{
+        font-size: 5rem;
+        padding: 1rem;
+    }
+  }

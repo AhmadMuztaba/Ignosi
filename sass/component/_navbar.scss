@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: #766B6B;
+    flex-direction: row;
+    justify-content: space-between;
+    &__logo{
+        margin-left: 2rem;
+    }
+    &__option{
+        margin-right: 2.5rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &--login{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    &--signup{
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

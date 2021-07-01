@@ -1,0 +1,21 @@
+.NoFilesUploaded{
+    height: 70vh;
+    width: auto;
+    position: relative;
+}
+.NoFiles{
+    position: absolute;
+    font-size: 3rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.advertise__info{
+    &--link:link,&--link:visited{
+        text-decoration: none;
+        color: white;
+    }
+    &--link:hover{
+        color:#b0a160;
+    }
+}

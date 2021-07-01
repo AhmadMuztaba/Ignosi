@@ -1,0 +1,49 @@
+.dashboard{
+    &__info{
+        padding: 6%;
+        background-color: #4b8a98;
+        display: flex;
+        &--user{
+            display: flex;
+            flex:0 0 70%;
+            flex-wrap: wrap;
+            &--circle{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #84142d;
+                color: #cab93f;
+                font-size: 2.5rem;
+                height: 28rem;
+                width: 28rem;
+                border-radius: 50%;
+                padding: 5%;
+            }
+        }
+    }
+    &__buttons{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10rem !important;
+        height: 30rem;
+        padding: 5%;
+        background-color: #d8c962;
+        margin-top: 1px solid white;
+
+        &--notification{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5.2rem;
+            width: 5.2rem;
+            border-radius: 50%;
+            background-color: rgb(117, 45, 45);
+            font-size: 2.7rem;
+            position: absolute;
+            right: 50rem;
+            top: 8.9rem;
+        }
+    }
+}

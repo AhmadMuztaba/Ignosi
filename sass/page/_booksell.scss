@@ -1,0 +1,43 @@
+.booksell{
+    &__form{
+        &--form{
+            padding:5%;
+            font-size: 2.3rem;
+            background-color: #5b8c85;
+            &__button{
+                display: flex;
+                justify-content: center;
+            }
+            &__bookname,&__bookAuthor,&__price,&__imgUpload,&__BookDetails{
+                margin-bottom: 2rem;
+                &--label{
+                    padding: 1%;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    
+                }
+                display: flex;
+                justify-content:center;
+                &--input{
+                    padding: 1%;
+                    flex: 0 0 80%;
+                    &:focus{
+                        outline: none;
+                        box-shadow: 0 1rem .4rem rgba($color: #000000, $alpha: .25);
+                    }
+                }
+                &--textarea{
+                    padding: 1%;
+                    resize: none;
+                    flex: 0 0 80%;
+                    height: 15rem;
+                    &:focus{
+                        outline: none;
+                        box-shadow: 0 1rem .4rem rgba($color: #000000, $alpha: .25);
+                    }
+                }
+            }
+        }
+    }
+}

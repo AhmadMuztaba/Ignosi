@@ -1,0 +1,563 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #343427;
+  position: relative; }
+
+.custom--container {
+  width: 1140px; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  color: white;
+  font-family: 'Asap', sans-serif;
+  line-height: 1.7; }
+
+.navbar {
+  font-size: 3rem;
+  font-family: 'Baloo', cursive; }
+  .navbar__option {
+    font-weight: 400;
+    font-size: 1.7rem; }
+
+.btn {
+  font-size: 1.7rem; }
+  .btn--logo {
+    font-family: 'Baloo', cursive;
+    font-size: 2.5rem; }
+  .btn--download {
+    margin-top: 3rem;
+    font-family: 'Lobster', cursive;
+    font-size: 2rem; }
+
+.custom--carousel {
+  height: 46.2rem;
+  width: 100vw;
+  overflow: hidden;
+  border-bottom: 1px solid white; }
+
+.carousel__slide {
+  font-family: 'Zhi Mang Xing', cursive;
+  font-size: 2.2rem; }
+  .carousel__slide--text {
+    font-size: 5.5rem;
+    line-height: 1.2; }
+    .carousel__slide--text-2, .carousel__slide--text-3 {
+      font-family: 'Zhi Mang Xing', cursive;
+      font-size: 5.2rem; }
+    .carousel__slide--text-4 {
+      font-family: 'AponaLohit', sans-serif;
+      font-size: 4.6rem; }
+    .carousel__slide--text-5 {
+      font-family: 'AponaLohit', sans-serif;
+      font-size: 4.2rem; }
+
+.footer {
+  padding: 2%;
+  line-height: 2;
+  text-align: center;
+  font-size: 1.7rem;
+  background-color: #766B6B;
+  margin-bottom: 0px;
+  overflow: hidden; }
+  .footer__icon {
+    font-size: 5rem;
+    padding: 1rem; }
+
+.margin-top--big {
+  margin-top: 8rem; }
+
+.margin-top--medium {
+  margin-top: 6rem !important; }
+
+.margin-bottom--small {
+  margin-bottom: 4rem !important; }
+
+.margin-bottom--medium {
+  margin-bottom: 6rem !important; }
+
+.margin-bottom--big {
+  margin-bottom: 8rem !important; }
+
+.margin-3-px {
+  margin-right: .3rem; }
+
+.backgroung-color-blue {
+  background-color: #5b8c85; }
+
+.navbar {
+  display: flex;
+  width: 100%;
+  padding: 1.1rem;
+  background-color: #766B6B;
+  flex-direction: row;
+  justify-content: space-between; }
+  .navbar__logo {
+    margin-left: 2rem; }
+  .navbar__option {
+    margin-right: 2.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+  .navbar--login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .navbar--signup {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.btn {
+  text-decoration: none; }
+  .btn--login, .btn--signup, .btn--logo {
+    color: white;
+    transition: all .4s; }
+    .btn--login:hover, .btn--signup:hover, .btn--logo:hover {
+      color: #b0a160; }
+  .btn--form-login, .btn--form-signup {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #734F4F;
+    margin-top: 3rem;
+    margin-left: 12rem;
+    font-size: 2.2rem; }
+    .btn--form-login:hover, .btn--form-signup:hover {
+      color: #347474;
+      border: #851d41 1px solid; }
+  .btn--googleAuth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    margin-top: 5rem; }
+    .btn--googleAuth:hover {
+      color: #fdd365; }
+
+.button__download {
+  position: absolute;
+  top: 35rem;
+  left: 12rem; }
+  .button__download--apple {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    transition: all .4s; }
+    .button__download--apple:hover {
+      padding: 1rem 2rem;
+      font-size: 2.1rem;
+      border-radius: 1rem;
+      border: .2rem solid #ffe196;
+      background-color: #e9ea77; }
+  .button__download--google {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    transition: all .4s; }
+    .button__download--google:hover {
+      padding: 1rem 2rem;
+      font-size: 2.1rem;
+      border-radius: 1rem;
+      border: .2rem solid #ffe196;
+      background-color: #347474; }
+
+.form-button {
+  padding: 1%;
+  font-size: 2rem; }
+
+.dashboard__buttons-btn {
+  font-size: 2rem;
+  padding: 2%;
+  margin-right: 1rem;
+  border-radius: 1rem; }
+
+.custom--carousel {
+  height: 46.2rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid white; }
+
+.carousel__slide {
+  position: relative;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .carousel__slide--image {
+    padding-left: 5rem;
+    display: inline-block;
+    height: 30rem;
+    width: 30rem; }
+  .carousel__slide--text {
+    align-self: center;
+    padding-bottom: 2rem;
+    padding-right: 2rem; }
+
+.heading--secondary {
+  padding-top: 8rem;
+  text-align: center;
+  font-size: 4.5rem;
+  color: white;
+  margin-bottom: 0 !important; }
+
+.mainHeader__option {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0 60%;
+  align-items: center; }
+  .mainHeader__option--sellBooks {
+    margin: 0 auto; }
+    .mainHeader__option--sellBooks-link:active, .mainHeader__option--sellBooks-link:visited {
+      color: white;
+      text-decoration: none;
+      transition: all .5s; }
+    .mainHeader__option--sellBooks-link:hover {
+      text-decoration: none;
+      color: #b0a160; }
+  .mainHeader__option--profile {
+    margin-right: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .mainHeader__option--profile-dropdown-input {
+      opacity: 0;
+      display: none;
+      width: 0; }
+    .mainHeader__option--profile-dropdown-show {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      transition: all .5s; }
+  .mainHeader__option--search {
+    position: relative;
+    margin-right: 25rem; }
+    .mainHeader__option--search-icon {
+      z-index: 1;
+      color: #D6D2C4;
+      position: absolute;
+      top: -.7rem;
+      left: .9rem; }
+    .mainHeader__option--search-input {
+      color: #D6D2C4;
+      font-size: 1.8rem;
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      padding: .6rem;
+      padding-left: 5rem;
+      border-radius: 10rem;
+      border: none; }
+      .mainHeader__option--search-input::-webkit-input-placeholder {
+        color: #D6D2C4; }
+      .mainHeader__option--search-input:focus {
+        outline: none; }
+
+.mainHeader__option--profile-dropdown-show {
+  z-index: 1000;
+  font-family: 'Baloo', cursive;
+  background-color: #ff677d;
+  position: absolute;
+  top: 7rem;
+  right: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .mainHeader__option--profile-dropdown-show-logout-link:link, .mainHeader__option--profile-dropdown-show-logout-link:visited {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 1rem; }
+  .mainHeader__option--profile-dropdown-show-logout-link:hover {
+    color: #b0a160; }
+  .mainHeader__option--profile-dropdown-show-dashboard-link:link, .mainHeader__option--profile-dropdown-show-dashboard-link:visited {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 1rem; }
+  .mainHeader__option--profile-dropdown-show-dashboard-link:hover {
+    color: #d8c055da; }
+
+.grid {
+  width: 114rem;
+  margin: 0 auto;
+  margin-top: 6rem;
+  color: darkslategray;
+  display: grid;
+  margin-right: 5rem;
+  grid-template-columns: repeat(3, 23rem);
+  grid-column-gap: 15rem;
+  grid-row-gap: 5rem; }
+
+.NoFilesUploaded {
+  height: 70vh;
+  width: auto;
+  position: relative; }
+
+.NoFiles {
+  position: absolute;
+  font-size: 3rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.advertise__info--link:link, .advertise__info--link:visited {
+  text-decoration: none;
+  color: white; }
+
+.advertise__info--link:hover {
+  color: #b0a160; }
+
+.advertise {
+  padding-bottom: 8rem;
+  border-bottom: 1px solid white; }
+  .advertise__image {
+    display: inline-block;
+    height: 39rem;
+    width: 30rem; }
+  .advertise__info {
+    color: white;
+    margin-top: 1.3rem;
+    font-size: 1.6rem; }
+
+.downloadable {
+  background-color: #444436;
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  line-height: 5; }
+  .downloadable__heading {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px; }
+
+.login, .signup {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  margin: 10rem; }
+  .login--in, .signup--in {
+    color: #D65757; }
+  .login__design, .signup__design {
+    flex: 0 0 45%;
+    align-self: center;
+    font-size: 10rem;
+    margin-bottom: 26rem;
+    margin-left: 10rem; }
+  .login__form, .signup__form {
+    padding: 5rem;
+    background-color: #4A2F2F;
+    border: #46978D 1px solid;
+    flex: 0 0 40%; }
+  .login--form--input, .login--form--label, .signup--form--input, .signup--form--label {
+    width: 100%;
+    margin: 0 auto;
+    display: block; }
+  .login--form--input, .signup--form--input {
+    background-color: #5f6769;
+    margin-bottom: 2.5rem;
+    padding: 2%;
+    color: white;
+    font-size: 1.7rem;
+    border: none;
+    transition: all .4s; }
+    .login--form--input:focus, .signup--form--input:focus {
+      outline: none;
+      box-shadow: 0 1rem 0.4rem rgba(0, 0, 0, 0.25); }
+    .login--form--input::-webkit-input-placeholder, .signup--form--input::-webkit-input-placeholder {
+      font-family: 'Poppins', sans-serif;
+      color: #f5f0e3;
+      opacity: 0.5; }
+  .login--form--label, .signup--form--label {
+    margin-bottom: 2rem !important;
+    font-family: 'Poppins', sans-serif;
+    color: #FFF6F6;
+    font-size: 2.5rem;
+    text-transform: lowercase; }
+
+.booksell__form--form {
+  padding: 5%;
+  font-size: 2.3rem;
+  background-color: #5b8c85; }
+  .booksell__form--form__button {
+    display: flex;
+    justify-content: center; }
+  .booksell__form--form__bookname, .booksell__form--form__bookAuthor, .booksell__form--form__price, .booksell__form--form__imgUpload, .booksell__form--form__BookDetails {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center; }
+    .booksell__form--form__bookname--label, .booksell__form--form__bookAuthor--label, .booksell__form--form__price--label, .booksell__form--form__imgUpload--label, .booksell__form--form__BookDetails--label {
+      padding: 1%;
+      display: flex;
+      justify-content: center;
+      width: 100%; }
+    .booksell__form--form__bookname--input, .booksell__form--form__bookAuthor--input, .booksell__form--form__price--input, .booksell__form--form__imgUpload--input, .booksell__form--form__BookDetails--input {
+      padding: 1%;
+      flex: 0 0 80%; }
+      .booksell__form--form__bookname--input:focus, .booksell__form--form__bookAuthor--input:focus, .booksell__form--form__price--input:focus, .booksell__form--form__imgUpload--input:focus, .booksell__form--form__BookDetails--input:focus {
+        outline: none;
+        box-shadow: 0 1rem 0.4rem rgba(0, 0, 0, 0.25); }
+    .booksell__form--form__bookname--textarea, .booksell__form--form__bookAuthor--textarea, .booksell__form--form__price--textarea, .booksell__form--form__imgUpload--textarea, .booksell__form--form__BookDetails--textarea {
+      padding: 1%;
+      resize: none;
+      flex: 0 0 80%;
+      height: 15rem; }
+      .booksell__form--form__bookname--textarea:focus, .booksell__form--form__bookAuthor--textarea:focus, .booksell__form--form__price--textarea:focus, .booksell__form--form__imgUpload--textarea:focus, .booksell__form--form__BookDetails--textarea:focus {
+        outline: none;
+        box-shadow: 0 1rem 0.4rem rgba(0, 0, 0, 0.25); }
+
+.dashboard__info {
+  padding: 6%;
+  background-color: #4b8a98;
+  display: flex; }
+  .dashboard__info--user {
+    display: flex;
+    flex: 0 0 70%;
+    flex-wrap: wrap; }
+    .dashboard__info--user--circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #84142d;
+      color: #cab93f;
+      font-size: 2.5rem;
+      height: 28rem;
+      width: 28rem;
+      border-radius: 50%;
+      padding: 5%; }
+
+.dashboard__buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem !important;
+  height: 30rem;
+  padding: 5%;
+  background-color: #d8c962;
+  margin-top: 1px solid white; }
+  .dashboard__buttons--notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.2rem;
+    width: 5.2rem;
+    border-radius: 50%;
+    background-color: #752d2d;
+    font-size: 2.7rem;
+    position: absolute;
+    right: 50rem;
+    top: 8.9rem; }
+
+.BookAbout {
+  padding: 10rem;
+  border-bottom: 1px solid white; }
+  .BookAbout__info {
+    display: flex; }
+    .BookAbout__info--image {
+      flex: 0 0 40%; }
+      .BookAbout__info--image-pic {
+        height: 35rem;
+        width: 35rem; }
+    .BookAbout__info--allinfo {
+      font-size: 2rem; }
+
+.Bookcomments {
+  padding: 10rem;
+  font-size: 2rem; }
+  .Bookcomments__comment {
+    padding: 3%;
+    background-color: #606060;
+    margin-bottom: 2rem; }
+  .Bookcomments--input {
+    padding: 2%;
+    margin-right: 2rem;
+    height: 20rem;
+    width: 90%;
+    border-radius: 2rem;
+    margin-bottom: 6rem; }
+    .Bookcomments--input:focus {
+      outline: none;
+      box-shadow: 0 1rem 0.4rem rgba(238, 125, 125, 0.25); }
+
+.sellerNotification {
+  background-color: #A19882;
+  margin-bottom: 8rem;
+  padding: 2rem; }
+  .sellerNotification--header {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    font-size: 6rem; }
+  .sellerNotification__name {
+    margin-left: 3rem;
+    font-size: 2rem;
+    padding: 2%;
+    display: grid;
+    font-weight: 800;
+    grid-template-columns: repeat(6, 1fr);
+    border-bottom: 1px solid #5f6666; }
+  .sellerNotification__info {
+    padding: 2%;
+    margin-left: 3rem;
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); }
+  .sellerNotification--message:link, .sellerNotification--message:visited {
+    text-decoration: none;
+    color: teal; }
+
+.message__heading {
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  margin-top: 5rem;
+  padding: 2%; }
+
+.message__show {
+  font-size: 2rem;
+  background-color: #70706d;
+  padding: 3%;
+  margin: 1rem; }
+
+.message__formWrapper--input {
+  font-size: 2.3rem;
+  margin: 0 auto;
+  height: 10rem;
+  margin-top: 3rem;
+  padding: 2%;
+  width: 90%;
+  margin-bottom: 6rem;
+  margin-left: 1rem; }
+  .message__formWrapper--input:focus {
+    outline: none;
+    box-shadow: 0 0.5rem 0.6rem rgba(207, 207, 207, 0.25);
+    border: none; }
+
+.search__header {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem; }
+
+.search__center {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; }
+  .search__center--link:link, .search__center--link:visited {
+    text-decoration: none;
+    color: white; }
+  .search__center--link:hover {
+    text-decoration: none;
+    color: #b0a160; }

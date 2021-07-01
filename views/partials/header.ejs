@@ -1,79 +1,104 @@
-  <!doctype html>
-  <html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <title>R-shop</title>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/bootstrap-social.css">
+    <link rel="stylesheet" href="/css/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script defer src="https://friconix.com/cdn/friconix.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.11/js/all.js"></script>
     <link href="https://fonts.maateen.me/charu-chandan-hard-stroke/font.css" rel="stylesheet">
     <link href="https://fonts.maateen.me/apona-lohit/font.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Acme|Asap|Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Baloo|Great+Vibes|Pacifico|Poppins|Zhi+Mang+Xing&display=swap" rel="stylesheet">
-  </head>
-
-  <body>
-    <nav class="navbar navColor">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand aColor brandFont" href="/">Brand</a>
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Great+Vibes|Pacifico|Poppins|Zhi+Mang+Xing&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__logo">
+            <a class="btn btn--logo" href="/">Brand</a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-
-        <li class=""> <a class="signUp aColor"href="/userregister"><i class="fas fa-user-plus" ></i>sign up</a>
-
-      <a class="signUp aColor" href="/userlogin"><i class="fas fa-user-plus"></i>login</a></li>
-
-        </ul>
+        <div class="navbar__option">
+            <div class="navbar--login">
+                <a class="btn btn--login" href="/userlogin">
+                        <i class="fas fa-user-plus"></i>
+                        login
+                    </a>
+            </div>
+            <div class="navbar--signup">
+             <a class="btn btn--signup"href="/userregister">
+                    <i class="fas fa-user-plus"></i>
+                    sign up
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="custom--carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel__slide">
+                    <p class="carousel__slide--text carousel__slide--text-1">
+          “The heart has no tears to give,<br />
+          it drops only blood, bleeding itself away in silence.”
+        </p>
+              <div>
+                <img src="https://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/4/fe/4fe33d8f-5fcd-5402-9c4c-99b121c4d56c/4dfb99b2094ac.image.jpg" class="carousel__slide--image carousel__slide--image-1"alt="uncle toms cabin">
+            </div>
+            </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel__slide">
+                    <p class="carousel__slide--text carousel__slide--text-2">
+                        "It is the unknown we fear <br />
+                        when we look upon death and darkness, nothing more."
+        </p>
+              <div>
+                <img src="https://pictures.abebooks.com/JULIANBOOK/30089723387.jpg" class="carousel__slide--image carousel__slide--image-2" alt="harry potter and the half blood prince.jpg">
+            </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel__slide">
+                    <p class="carousel__slide--text carousel__slide--text-3">
+                        “Men go to far greater lengths to avoid<br />
+                        what they fear than to obtain what they desire.”
+        </p>
+              <div>
+                <img src="https://i.pinimg.com/originals/80/d8/d9/80d8d9e453b6c4711c95984d6b614d71.jpg" class="carousel__slide--image carousel__slide--image-3" alt="vincii code">
+            </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel__slide">
+                    <p class="carousel__slide--text carousel__slide--text-4">
+                        “মা , এখন আমার ছুটি  , <br />
+                        হয়েছে মা , এখন আমি বাড়ি যাচ্ছি. ”
+        </p>
+              <div>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51uoL%2B3miiL._SX319_BO1,204,203,200_.jpg" class="carousel__slide--image carousel__slide--image-4" alt="golpo-guccho">
+            </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel__slide">
+                    <p class="carousel__slide--text carousel__slide--text-5">
+                        "কবরীতে ফুল শুকাল , কাননের ফুল ফুটল বনে,<br />
+                        দিনের আলো প্রকাশিল,মনের সাধ রহিল মনে ।"
+        </p>
+              <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8NDw0NDQ0NDQ0NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHTQgGBomGxUVITEhJSktLi4uFx8zODMtNzQtLisBCgoKDQ0OFQ8PFS0dFR0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKy0tKy0tLS0vLS0tLS0tLS0tLS0tLf/AABEIARQAtwMBEQACEQEDEQH/xAAbAAEBAQEBAQEBAAAAAAAAAAAAAQMCBAUGB//EADYQAAICAQMCBAMFBgcAAAAAAAABAgMRBBIhBTETIkFhMlFxFCNSgaEzU3ORstEGFUJikrHh/8QAGgEBAQEBAQEBAAAAAAAAAAAAAAECAwQFBv/EADARAQEAAgEDAQUHAwUAAAAAAAABAhEhAxIxQQQTIlGxFGFxgZGh8DIzUkKywdHh/9oADAMBAAIRAxEAPwD+ho/KPru0gKEVIDrBQwBSgEAADAUwEMBVwEAGAJgCkVChgaQ2jRswXQrRBgkZadJFR0kB0kBcFQAAAAAAFCooAAAAYAYAACioA0NAgPOjm06SNeiO0BQAQAAAAFKBARQIKUAAAAUXAAAAKGAPOcmnaKjtIqAUKgQAIFUIAAAACooAUoAAAAClQAAYM5tuolR2VAgFEIIFEB0VEIBQIAVSooAooAAECqAAgBg0c23cSo7KiEAAFc4A6RYgAIAECqVBAUooAAVAgFAgpQAxwc2ncTURQAACEAsFAYAYGhAGApgIqRRQAQApQAAAAADPBjTSlRQBAKBAKAFKAAAAABAClAAAAAAAADgyqlAlAAAApR5LNVJzlVTWpyht3ynLw64NrKWcNt454X5lknm1qYzW7U019niSquVe5VxsjKvdtw5NYafrwWya3Cya3HsMsGf/AAK8vUHbs+4w5Kcd+Nrns9du7jd27msdb5aw7d/Eun19VjlBS22RxuqsWyyP5Pv9ULjZyXCzn0eic1FOUmoxXLcnhJfUjHl5dP1GNk4wULUpqTrslHbCxRxnHOfVctcmrjZG7hZN7a6vVwpUXZuUW8OahKUYe8muy9ySW+ExxuXhuRlQAAAAAFGZhVAAAAAD5+r6hiVlMIx3Vw32zslsrhBrOcfFLj5ce50xx3q3w3jhxK+bVoKo/ZdO6oyvfhTutflnsxKTWc5fwuPyN915vo63LL4st8PRfmKtVE3CxTjVXVBRnZOuC5is/D5pze704Mz034Znp3Th5NMrYv7O7MSkoOWnjJzko2XbpuUm88QTWe3mXr31def3avb/AFa/N1LSW2eHXtkoVaqVNUoNxdNMZOTsz6NrEF7fUbk5+7+f9ndJu/ONNN06VepujXGyquxc2J5i68ptp/vMvas8pZeWS5bxm0ucuM3zXVPTvEl95pY1wTjKcZRg4+XdwsNucnuw5PHAuWvFLnqcZcsp9MtsrodsfEht3Wwus2zqrTzCEX2i8d5d+O6RZlJbpfeSW6a6LxrbPJY6/CqlGt2U2WqSlPLe6WMrCgk88qLYupOWcu2TmeXtfT7rPLqNTvrfxV1VKpTX4ZPLePoZ7pPE5Y78Z/TOX0sGHNQAAqBFCgBmjCqAAACikHhlCOonOFun4plB12TXxPOcxePZdn9fkb3ZNyt84zcvl6NRJQi7XBzlXGTSjHdPtyo/UzPkzOeHzYRtubfh7FL45NOupL5Y4na/riJviOnw4+v8+kerRdKpolvhF72nmTfDbxl7V5V2XZehMs7WcupllxXuMMAGGu0iuioOy2vElLdVPZLK9H817G5dei45dt3p5KtDONiVsrNVS8OErJR+6kvxRWFPPpLDa/U1ua44rdzmuOK9cdPPxna7puDgoKn/AEJ5+L6mdzWtMbnbrT0kZAAFKgAAAAMkZaUgEUKgAAoAAAKARQKUEAAAAKEEBAqlQAAZIw2oAgAAgUAKAAFFCKAKigAAAAAKAAABSjLBitBFCAACBRQAAqKAwBSihAAUAIQUAUAAAClRiznWxEUAoAClQKARSigUIACgQCgAIAAoAUAECjFnOugQAAFLpFAFFCKUUIAUogFAgAAQAKUAAAqAGJyroAUAXSKUALgqLgChAooACEFKIAAEFKAQKAACgYHN0UIAUopUAKAApUAKAAhAKKBAAFCBQAAAAGKOTopdIpQAoRSgBUECigAAQCoBQAQKKAAAQgFFAxRzbUoAUIFFAoQKKACAUCAAAAKAFAAAIBQBUYo5uigABUUCgUqAFABAAUAAAABQAAAAAFFRYjA5OigAKVACgUqAFAACooAABAKAAFAAAABFSNSDBHF0UAUUIoAooRQgFAgUUAAAFAIAUCAAAFRRTSMMHLTooAgAUClAIpUAOZzUVKUniMU5Sb7JJZbEWS26nl3PyyUJOMZyWVFyipNds4O32fq/4szKWbnh1sft/wAo/wBy/Zur/infGVl0IzjXKcFOfwRclmXOME9x1PHa1N2XKeI7fDcX8UcKS+WVlfozGXTywusppJdzc8BkAKAKAAAAAqNIxObooAAQAKEUqAADzdT/AGGo/gXf0Ms8unS/uY/jPqy1+optlbv07lOiF1mLXsUnVKU3FR3uTWXF527cTXPOD7mVlvM8MdLDqYzHWeplqcc+ePlr997n5vymj6xqLqnfX0C2ytpSdr1lsXYlCUt2Nqc1tlLsmnn1PPM8rNzp/u+t1PZej08+zL2uTL5ds4518+OZ+T6nQ+pU30T1NuhlRLT62f3Tuc7Y3Q2Tb+9cf3j8vfypJcJLeGcyndcdary+1ez59PqTp4dXumWPnWpq7npv5efv387fv6ezfO6WJJOUElNSUsKCXOXn0z9Gjye2X448XbrHGfzy9B5EABAAgFKAAopUYnJ0UqAqqQAAQKKEAPP1P9hqP4F39DLPMdOl/cx/GfV5Xp5wtuzp6q4TnqN1lddNe6Mpw3zklDc3KPd8p+Dyux9vXN4/n8+id8uGPx22a43b4l1POuL+H9XHqt02nnHMXJYztlD/AGxj8k+3Cxz7otZxm3d1c3B+FVGc5xdnmhBqc3hb5boc5jGCzy3nuhZfSGOWO/iy1Jx6/pxfntp02txU4uEKsOGK64eHCuOxYio4WMLHofP9rmsoueXdq739953y9h5GAAAAAAABFgpUYnJ0XJdgQAKEABRUEAPP1P8AYaj+Bd/QzU8unS/uY/jPq8mq09NMtRnURVk46qMqs174q2KceN7k2nueFhPe+OEfaskt5MM885h8HE1zz6efSTn/AIfP0lN9dcav81qtaThGy7p8J3wSW3Dkre+Wmt2W3h8mJMpNd/7f+vR1M+lllc/cWfdMrr/b9PT5PT0/QKVNkLddHUvUX6i13SVEW5OME4KDnhJODfBcceLvLe3PrdbXUmWHS7e2Sa5+/nevXfq+joKvDdkFhpOt7l2lmuMty8z75+bPF7XNZRxzy7pL/PP4T6PWeRgAAAAAoEAooRizm6AFAAAKEUoBFA4urU4zhLO2cZQljh4awyrjbjZZ5i2VVznK2VVcrJ4UpNSeUlhcZx2PVfa+pbvUZm5jMZldRytJR2+zafCkpJeFHCkuzS9Hx6D7Vn8p+h3Z/wCd/VIaOiKwtNp8Obm061LM3nLee/xP+Y+1Z/Kfotyzv+u/Ly1UEm2ljdt4XZKMVFY/JI5dTqZdS7yT00pzAAAAACoBVQQKMTk6BAKKAAoBFRQigCgEVlEAoACAUAARYAAAAyBicm1KAADoAVAChAAUUAAAFRQAAoAUqAEIoAAxOTooQApQApUUIIAUAKAAAUqBQAZIBRSgEQigADA5OigVFQAoFKihAAUAAFAAMlNGRtAAAAAUoAAIBicnQQFQFCKUUqARQBQAAUCAUAAKAAAAAAMl2gB58nB1XJdooFKigVFFKgBQgUABAAFAAAAoAoBAKAGwj8zX1a1uxYh5O3D/ALnb7Ph27dfWPdVrJuMZPGX7exjLpYy6Z3zWK6lZuksR4z6P29yzo4t6427r6jY9/EfKpNcP0X1M+7iZTUfM03+I75+DmNS8TUeFLEZfDjPHPc9OXsuEuXnibef3l4ZdS/xPfTdKqMaXFY5lGTfKz+IvS9lwzxlu2er1csctR9OPWLXziHxqPaXbY38/YY+zYc+S9XJp0vqtl3xKC+9lDyp9k37+xz6nQxx8Oky29l+slGEpJRynjlPHY5zCbbx5rl6+fn4j5YKS4ff+Zb05LpdeGr1UvNwuHXjj8Xcl6c0jRXvEXxzJr+Rntmx56NbKUrk1HFc4RWE+U1nnk1l05JPvZ3zY2jqJNyXHBOyNH2iXPbj6iYTgefW9QnXDdFRbylynjn8zrh0cbdMZ3tm460mtnOG9qOdueE8f9mculJdLjdyV64Wt/L0/Unu4Ws/tMsS4XEsLuX3cXXhXqH8l+pnthpk9ZLOMR7Z7P+5qdOWGnUNVJuSxHhpdmL04acanUSyop7ctrKSzwvce7lWP/9k=" class="carousel__slide--image carousel__slide--image-5" alt="bow thakuranir haat">
+            </div>
+              </div>
+              </div>
+          </div>
+      <div class="button__download">
+        <button type="button" class="btn btn-light btn-lg btn-xl button__download--apple"><i class="fi-xnsuxl-apple"></i> Download</button>
+        <button type="button" class="btn btn-primary btn-lg btn-xl button__download--google"><i class="fi-xnsuxl-playstore-solid"></i> Download</button>
+        </div>
       </div>
-    </nav>
-
-    <div id="part1">
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="quote1">
-      “The heart has no tears to give,<br />
-      it drops only blood, bleeding itself away in silence.”
-              </div>
-            <img src="https://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/4/fe/4fe33d8f-5fcd-5402-9c4c-99b121c4d56c/4dfb99b2094ac.image.jpg" class="image1" alt="uncle toms cabin">
-          </div>
-          <div class="carousel-item">
-            <div class="quote2">
-            "It is the unknown we fear <br />
-             when we look upon death and darkness, nothing more."
-              </div>
-            <img src="https://pictures.abebooks.com/JULIANBOOK/30089723387.jpg" class="image2" alt="harry potter and the half blood prince.jpg">
-          </div>
-          <div class="carousel-item">
-            <div class="quote3">
-      “Men go to far greater lengths to avoid<br />
-       what they fear than to obtain what they desire.”
-              </div>
-            <img src="https://i.pinimg.com/originals/80/d8/d9/80d8d9e453b6c4711c95984d6b614d71.jpg" class="image3" alt="vincii code">
-          </div>
-          <div class="carousel-item">
-            <div class="quote4">
-      “মা , এখন আমার ছুটি  , <br />
-      হয়েছে মা , এখন আমি বাড়ি যাচ্ছি. ”
-              </div>
-            <img src="https://images-na.ssl-images-amazon.com/images/I/51uoL%2B3miiL._SX319_BO1,204,203,200_.jpg" class="image4" alt="vincii code">
-          </div>
-          <div class="carousel-item">
-            <div class="quote5">
-      "কবরীতে ফুল শুকাল , কাননের ফুল ফুটল বনে,<br />
-       দিনের আলো প্রকাশিল,মনের সাধ রহিল মনে ।"
-              </div>
-            <img src="https://anandodhara.com/wp-content/uploads/2019/02/bou-thakuranir-haat-by-rabindranath-thakur-front-cover.jpg" class="image5" alt="vincii code">
-          </div>
-      </div>
-  <div class="download">
-    <button type="button" class="btn btn-light btn-lg btn-xl btn2"><i class="fi-xnsuxl-apple"></i> Download</button>
-    <button type="button" class="btn btn-primary btn-lg btn-xl btn1"><i class="fi-xnsuxl-playstore-solid"></i> Download</button>
-    </div>
-  </div>
-  </div>
+    </section>

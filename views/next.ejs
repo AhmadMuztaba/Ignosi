@@ -1,28 +1,27 @@
-<%- include('partials/nextheader'); -%>
-<div class="container">
-
-  <%if(findFiles>0){%>
-  <div class="row">
-      <%for(let i=findFiles-1;i>=0;i--){%>
-    <div class="col-lg-3 col-md-4 col-sm-12">
-      <div class ="heightt">
-        <a href="/aboutbook/<%=found[i]._id%>">
-        <img src="<%=found[i].image%>" class="cover1 cover2" alt="img" />
-     </a>
-        <div class="AuthPrice">
-          <a class="ahrefbook" href="/aboutbook/<%=found[i]._id%>">
-          <b>Author: <%=found[i].author_Name%></b><br />
-          <b>price: <%=found[i].book_price%> taka</b>
-          <a>
-          </div>
-      </div>
+<%- include('partials/mainheader'); -%>
+<%if(findFiles>0){%>
+<section class="advertise">
+  <div class="grid">
+    <%for(let i=findFiles-1;i>=0;i--){%>
+  <div>
+    <a href="/aboutbook/<%=found[i]._id%>">
+      <img src="<%=found[i].image%>" class="advertise__image" alt="img" />
+    </a>
+      <p class="advertise__info">
+        <a class="advertise__info--link" href="/aboutbook/<%=found[i]._id%>">
+        <b>Author: <%=found[i].author_Name%></b><br />
+        <b>price: <%=found[i].book_price%> taka</b>
+        </a>
+      </p>
     </div>
       <%}%>
   </div>
+  </section>
 <%}else{%>
-  <h2 class="NoFiles">No files Uploaded yet</h2>
+  <div class="NoFilesUploaded">
+    <h2 class="NoFiles">No files Uploaded yet</h2>
+  </div>
 <%}%>
-
   </div>
 
-<%- include('partials/nextFooter') ;-%>
+<%- include('partials/mainFooter') ;-%>

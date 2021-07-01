@@ -1,67 +1,64 @@
-<%- include('partials/nextheader'); -%>
+<%- include('partials/mainheader'); -%>
 
 <%if(found.length>0){%>
-<h1 class="sellheader">Order</h1>
-<div class="orderBackground">
-  <div class="container">
-
-  <div class="row">
-    <div class="col-sm-2">
-      Book name
+<h1 class="sellerNotification--header">Order</h1>
+<div class="sellerNotification">
+  <div class="sellerNotification__name">
+    <div>
+      <b>Book name</b>
     </div>
-        <div class="col-sm-2">
-        Buyer's Name
-        </div>
-          <div class="col-sm-2">
-          Mobile
-          </div>
-            <div class="col-sm-2">
-            Address
-            </div>
-              <div class="col-sm-2">
-              Message
-              </div>
-            <div class="col-sm-2">
-            item
-            </div>
+    <div>
+      <b>Buyer's Name</b>
     </div>
-<%found.forEach(function(item){%>
-  <div class="row">
-      <div class="col-sm-2">
-      <%=item.bookname%>
-      </div>
-        <div class="col-sm-2">
-          <%=item.buyername%>
-        </div>
-    <div class="col-sm-2">
-    <%=item.mobileNumberOfBuyer%>
+    <div>
+     <b>Mobile</b>
     </div>
-      <div class="col-sm-2">
-      <%=item.Homeaddress%></div>
-        <div class="col-sm-2"> <a href="/message/<%=item._id%>"><i class="fas fa-comments"></i>message</a></div>
-
-      <%if(item.Shipped=="shipped"){%>
-           <div class="col-sm-2">
-        <div>
-          item shipped
-          </div>
-      </div>
-
-
-      <%}else{%>
-            <div class="col-sm-2">
-        <form action="/delivered" method="post">
-        (check this when you have shipped the product)
-        <input type="hidden" name="sellid" value="<%=item._id%>">
-        <input type="checkbox" name="delivered" value="shipped" onclick="this.form.submit()">
-        </form>
-      <%}%>
-
+    <div>
+      <b>Address</b>
+    </div>
+    <div>
+      <b>Message</b>
+    </div>
+    <div>
+      <b>item</b>
+    </div>
   </div>
+  <%found.forEach(function(item){%>
+  <div class="sellerNotification__info">
+    <div>
+      <%=item.bookname%>
+    </div>
+    <div>
+      <%=item.buyername%>
+    </div>
+    <div>
+      <%=item.mobileNumberOfBuyer%>
+    </div>
+    <div>
+      <%=item.Homeaddress%>
+    </div>
+    <div>
+      <a href="/message/<%=item._id%>" class="sellerNotification--message"><i class="fas fa-comments"></i>message</a>
+    </div>
+    <%if(item.Shipped=="shipped"){%>
+      <div>
+        item shipped
+      </div>
+      <%}else{%>
+        <div>
+          <form action="/delivered" method="post">
+            (item shipped?)
+            <input type="hidden" name="sellid" value="<%=item._id%>">
+            <input type="checkbox" name="delivered" value="shipped" onclick="this.form.submit()">
+            </form>
+        </div>
+        <%}%>
+      </div>
+      </div>
   <%})%>
-</div>
-</div>
 <%}else{%>
-  <h1 class="sellheader">No items</h1>
+  <div class="NoFilesUploaded">
+    <h2 class="NoFiles">No Request yet</h2>
+  </div>
 <%}%>
-<%- include('partials/sellFooter'); -%>
+<%- include('partials/mainFooter'); -%>

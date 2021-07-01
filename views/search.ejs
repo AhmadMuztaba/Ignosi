@@ -1,10 +1,18 @@
-<%- include('partials/nextheader'); -%>
-<h1 class="sellheader"> Search Result</h1>
+<%- include('partials/mainheader'); -%>
+<section class="search">
+<%if(Name.length>0){%>
+  <h1 class="search__header"> Search Result</h1>
+  <div class="search__center">
 <%for(let i=0;i<Name.length;i++){%>
-  <div class="searchshow">
-    <a href="/aboutbook/<%=Id[i]%>"><%=Name[i]%></a>
+  <div>
+    <a class="search__center--link" href="/aboutbook/<%=Id[i]%>"><%=Name[i]%></a>
     </div>
 <%}%>
-<%=no%>
-
-<%- include('partials/sellFooter'); -%>
+</div>
+<%}else{%>
+  <div class="NoFilesUploaded">
+    <h2 class="NoFiles">No files Found</h2>
+  </div>
+<%}%>
+</section>
+<%- include('partials/mainFooter'); -%>

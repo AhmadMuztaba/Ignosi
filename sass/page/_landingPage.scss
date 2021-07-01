@@ -1,0 +1,26 @@
+.advertise{
+    padding-bottom: 8rem;
+    border-bottom: 1px solid white;
+    &__image{
+        display: inline-block;
+        height: 39rem;
+        width: 30rem;
+    }
+    &__info{
+        color: white;
+        margin-top:1.3rem;
+        font-size: 1.6rem;
+    }
+}
+
+.downloadable{
+background-color: #444436;
+text-align: center;
+padding-top: 10rem;
+padding-bottom: 8rem;
+line-height: 5;
+&__heading{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+}

@@ -1,0 +1,26 @@
+.search{
+   
+    &__header{
+        font-size: 4rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+    &__center{
+        margin-top: 4rem;
+        font-size: 2.5rem;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+        &--link:link, &--link:visited{
+            text-decoration: none;
+            color: white;
+        }
+        &--link:hover{
+            text-decoration: none;
+            color: #b0a160;
+        }
+        
+    }
+}
