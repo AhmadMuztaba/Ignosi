@@ -21,10 +21,10 @@
       </div>
       <div>
         <%if(currentid!=list[0].userid){%>
-          <a href="/buy/<%=list[0]._id%>"><button class="btn btn-warning">Buy</button></a>
+          <a href="/buy/<%=list[0]._id%>"><button class="btn btn-warning buy-sell__button">Buy</button></a>
         <%}else{%>
       <form action="/remove" method="post">
-        <button type="submit" class="btn btn-danger" name="rmbButton" value="<%=list[0]._id%>">Remove</button>
+        <button type="submit" class="btn btn-danger buy-sell__button" name="rmbButton" value="<%=list[0]._id%>">Remove</button>
         </form>
       <%}%>
       </div>
@@ -40,7 +40,7 @@
 <form action="/aboutbook" method="post">
   <input type="text" name="comment" placeholder="Give a review" autocomplete="off" class="Bookcomments--input">
   <input type="hidden" name="prd" value="<%=list[0]._id%>"/>
-  <button type="submit" class="btn btn-warning" name="commentButton">post</button>
+  <button type="submit" class="btn btn-warning buy-sell__button" name="commentButton">post</button>
   </form>
 
   <div>

@@ -158,7 +158,6 @@ app.get("/success", function(req, res) {
   if (req.isAuthenticated()) {
     Product.find({}, function(err, result) {
       const number = result.length;
-      console.log(number);
       res.render("next", {
         found: result,
         findFiles: number
@@ -248,7 +247,6 @@ app.post("/Upload", function(req, res) {
   const price = req.body.price;
   const bookDetals = req.body.bookDetals;
   const userId = req.user._id;
-  console.log("user id:" + userId);
   let image = req.files.imgUpload;
   let imageName = image.name;
 
@@ -275,7 +273,6 @@ app.post("/Upload", function(req, res) {
 app.get("/dashboard", function(req, res) {
   if (req.isAuthenticated()) {
     const currentUser = req.user._id;
-    console.log(currentUser);
     Product.find({
       userid: currentUser
     }, function(err, result) {
@@ -516,7 +513,6 @@ app.post("/search",function(req,res){
   searchID=[];
   notFound=null;
   let search=req.body.search;
-  console.log(search);
    Product.find({book_name:{ $regex: '.*' + search + '.*',$options: 'i'} },
    function(err,data){
      if(data.length>0){

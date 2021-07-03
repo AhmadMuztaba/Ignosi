@@ -5,6 +5,10 @@
         display: inline-block;
         height: 39rem;
         width: 30rem;
+        @include respond(mobile){
+            width: 50rem;
+            height: 59rem;
+        }
     }
     &__info{
         color: white;
@@ -14,8 +18,16 @@
 }
 
 .downloadable{
+    @include respond(mobile){
+        display: none;
+    }
 background-color: #444436;
 text-align: center;
+@include respond(big-mobile){
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    line-height: 2;
+}
 padding-top: 10rem;
 padding-bottom: 8rem;
 line-height: 5;

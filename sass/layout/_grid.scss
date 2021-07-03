@@ -1,11 +1,24 @@
 .grid{
-    width: 114rem;
-    margin: 0 auto;
+    width: 90vw;
+    justify-content: center;
     margin-top: 6rem;
     color: darkslategray;
     display: grid;
-    margin-right: 5rem;
     grid-template-columns:repeat(3,23rem);
+    @include respond(tab-land){
+        grid-column-gap: 17rem;
+    }
+    @include respond(tab-port){
+        grid-column-gap: 14rem;
+    }
+    @include respond(big-mobile){
+        grid-template-columns:repeat(2,40rem);
+        grid-column-gap: 2rem;
+    }
+    @include respond(mobile){
+        grid-template-columns:1fr;
+        justify-items: center;
+    }
     grid-column-gap: 15rem;
     grid-row-gap:5rem;
 }

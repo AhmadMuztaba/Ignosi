@@ -1,4 +1,10 @@
 .custom--carousel{
+   @include respond(mobile){
+       display: none;
+   }
+   @include respond(big-mobile){
+    display: none;
+}
     height:46.2rem;
    width: 100%;
    overflow: hidden;

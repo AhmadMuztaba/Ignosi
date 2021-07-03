@@ -1,7 +1,15 @@
 .NoFilesUploaded{
     height: 70vh;
+    @include respond(tab-port){
+        height: 90vh;
+    }
     width: auto;
     position: relative;
+}
+.advertise--mobile{
+    @include respond(big-mobile){
+        padding-bottom: 25rem;
+    }
 }
 .NoFiles{
     position: absolute;

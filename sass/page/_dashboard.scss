@@ -1,5 +1,8 @@
 .dashboard{
     &__info{
+        @include respond(mobile){
+            display: none;
+        }
         padding: 6%;
         background-color: #4b8a98;
         display: flex;
@@ -22,6 +25,9 @@
         }
     }
     &__buttons{
+        @include respond(mobile){
+            height: 100vh;
+        }
         position: relative;
         display: flex;
         justify-content: center;
@@ -43,7 +49,25 @@
             font-size: 2.7rem;
             position: absolute;
             right: 50rem;
+            @include respond(tab-land){
+                right: 54rem;
+            }
+            @include respond(tab-port){
+                right: 41rem;
+            }
+            @include respond(big-mobile){
+                top:30%;
+                right: 35rem;
+            }
+            @include respond(mobile){
+                top:43%;
+                right: 35rem;
+            }
             top: 8.9rem;
         }
     }
+}
+.userCarouselImage{
+    height: 40rem;
+    width: 30rem !important;
 }

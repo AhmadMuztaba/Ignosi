@@ -59,6 +59,9 @@
                 padding-left: 5rem;
                 border-radius: 10rem;
                 border: none;
+                @include respond(big-mobile){
+                    width: 23rem;
+                }
                 &::-webkit-input-placeholder{
                     color: #D6D2C4;
                 }

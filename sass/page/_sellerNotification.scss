@@ -1,5 +1,8 @@
 .sellerNotification{
     background-color: #A19882;
+    @include respond(tab-land){
+        height:100vh;
+    }
     margin-bottom: 8rem;
     padding: 2rem;
     &--header{
