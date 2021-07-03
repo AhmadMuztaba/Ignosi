@@ -7,10 +7,10 @@
   <div class="signup__form">
       <form class="signup--form" action="/userregister" method="post">
           <label class="signup--form--label" for="Email">Email</label>
-          <input type="email" class="signup--form--input" name="email" id="email" required autocomplete="off"/>
+          <input type="email" class="signup--form--input" name="username" id="email" required autocomplete="off"/>
           <label class="signup--form--label" for="password">password</label>
           <input type="password" class="signup--form--input" name="password" required id="password"/>
-          <button type="submit"class="btn btn-lg btn--form-signup">signup</button>
+          <button type="submit"class="btn btn-lg btn--form-signup" disabled>signup</button>
       </form>
       <a class="btn btn--googleAuth" href="/auth/google" role="button">
         <div class="margin-3-px">

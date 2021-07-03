@@ -7,7 +7,7 @@
         align-items: center;
         &--sellBooks{
             margin: 0 auto;
-            &-link:active,&-link:visited{
+            &-link:link,&-link:visited{
                 color: white;
                 text-decoration: none;
                 transition: all .5s;

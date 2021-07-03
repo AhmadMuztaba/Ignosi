@@ -11,6 +11,9 @@ const session = require('express-session');
 const findOrCreate = require('mongoose-findorcreate');
 const fileUpload = require('express-fileupload');
 
+
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 let searchname=[];
 let searchID=[];
 let notFound;
@@ -95,6 +98,7 @@ const Buy_sell=new mongoose.model("Buy_sell",buy_SellSchema);
 const Comment=new mongoose.model('CommentDB',commentSchema);
 const User = new mongoose.model('UserDB', userSchema);
 const Product = new mongoose.model('ProductDB', productSchema);
+
 passport.use(User.createStrategy());
 
 passport.serializeUser(function(user, done) {
@@ -108,7 +112,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/ignosi",
+    callbackURL: "http://localhost:3000/auth/google/ignosi/",
     userProfileUrl: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -540,6 +544,6 @@ app.get("/search",function(req,res){
  }
 });
 
-app.listen(3000||process.env.PORT, function(req, res) {
-  console.log("connected to port 3000");
-});
+app.listen(port,host,()=>{
+  console.log("port connected to "+port);
+})

@@ -153,8 +153,7 @@ body {
       .btn--form-login, .btn--form-signup {
         margin-left: 12rem; } }
     .btn--form-login:hover, .btn--form-signup:hover {
-      color: #347474;
-      border: #851d41 1px solid; }
+      color: white; }
   .btn--googleAuth {
     display: flex;
     justify-content: center;
@@ -251,7 +250,7 @@ body {
   align-items: center; }
   .mainHeader__option--sellBooks {
     margin: 0 auto; }
-    .mainHeader__option--sellBooks-link:active, .mainHeader__option--sellBooks-link:visited {
+    .mainHeader__option--sellBooks-link:link, .mainHeader__option--sellBooks-link:visited {
       color: white;
       text-decoration: none;
       transition: all .5s; }
